@@ -1,6 +1,7 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
 import useTodo from "../../hooks";
+import TaskInput from "./TaskInput";
+import TaskList from "./TaskList";
 
 const Todo = () => {
   const { tasks, addTask, deleteTask, setDoneTask } = useTodo([
@@ -12,26 +13,8 @@ const Todo = () => {
   ]);
   return (
     <div>
-      <Formik initialValues={{ body: "" }} onSubmit={addTask}>
-        <Form>
-          <Field name="body" />
-          <input type="submit" value="+" />
-        </Form>
-      </Formik>
-      <section>
-        {tasks.map((task) => (
-          <p key={task.id}>
-            {task.body}
-            <span
-              onClick={() => {
-                deleteTask(task.id);
-              }}
-            >
-              X
-            </span>
-          </p>
-        ))}
-      </section>
+      <TaskInput addTask={addTask}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
   );
 };
