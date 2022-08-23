@@ -7,15 +7,19 @@ const Todo = () => {
   const { tasks, addTask, deleteTask, setDoneTask } = useTodo([
     {
       id: Date.now(),
-      body: "test task",
+      body: "Work 1",
       isDone: false,
     },
   ]);
   return (
-    <div>
-      <TaskInput addTask={addTask}/>
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
-    </div>
+    <section>
+      <TaskInput addTask={addTask} name="body" />
+      <TaskList
+        tasks={tasks}
+        deleteTask={deleteTask}
+        setDoneTask={setDoneTask}
+      />
+    </section>
   );
 };
 
