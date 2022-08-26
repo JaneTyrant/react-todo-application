@@ -27,22 +27,22 @@
 
   background: linear-gradient(to bottom right, #455da7, #481a72);
   background-repeat: no-repeat;
-}
 
-.heading {
-  color: $secondary-color;
-  padding: 2rem;
-  margin: 0;
+  &_heading {
+    color: $secondary-color;
+    padding: 2rem;
+    margin: 0;
 
-  font-size: 2rem;
-  text-align: center;
-  text-shadow: 0 0 10px $secondary-color;
-  text-transform: capitalize;
-}
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 10px $secondary-color;
+    text-transform: capitalize;
+  }
 
-.container {
-  max-width: 900px;
-  min-width: 300px;
-  padding: 0 10px;
-  margin: auto;
+  &_container {
+    max-width: 900px;
+    min-width: 300px;
+    padding: 0 10px;
+    margin: auto;
+  }
 }

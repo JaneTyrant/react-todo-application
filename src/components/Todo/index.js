@@ -14,8 +14,8 @@ const Todo = () => {
   ]);
   return (
     <section className={styles.section}>
-      <h1 className={styles.heading}>todo list</h1>
-      <div className={styles.container}>
+      <h1 className={styles.section_heading}>todo list</h1>
+      <div className={styles.section_container}>
         <TaskInput addTask={addTask} name="body" />
         <TaskList
           tasks={tasks}

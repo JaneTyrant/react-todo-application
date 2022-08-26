@@ -11,11 +11,11 @@ const TaskList = (props) => {
     return (
       <div className={styles.container} key={`div${task.id}`}>
         <label>
-          <p className={styles["task-body"]} key={task.id}>
+          <p className={styles["container_task-body"]} key={task.id}>
             {task.body}
           </p>
           <input
-            className={styles.checkbox}
+            className={styles.container_checkbox}
             type="checkbox"
             value={task.isDone}
             checked={task.isDone}
@@ -25,13 +25,13 @@ const TaskList = (props) => {
           />
         </label>
         <span
-          className={styles.delete}
+          className={styles.container_delete}
           onClick={() => {
             deleteTask(task.id);
           }}
         >
-          <span className={styles["delete-wrapper"]}>
-          <Delete />
+          <span className={styles["container_delete_wrapper"]}>
+            <Delete />
           </span>
         </span>
       </div>

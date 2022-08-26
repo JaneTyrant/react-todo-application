@@ -18,7 +18,7 @@ const SelectTask = (props) => {
     <>
       <div className={styles.container}>
           <select
-            className={styles.select}
+            className={styles.container_select}
             name="select"
             value={selectValue}
             onChange={handlerSelect}

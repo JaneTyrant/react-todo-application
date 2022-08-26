@@ -8,7 +8,7 @@
 .container {
   text-align: center;
 
-  .task-body {
+  &_task-body {
     width: 60%;
     height: 100%;
     padding: 0.9rem;
@@ -37,12 +37,12 @@
     }
   }
 
-  .task-body,
-  .delete-wrapper {
+  &_task-body,
+  &_delete_wrapper {
     display: inline-block;
   }
 
-  .checkbox {
+  &_checkbox {
     @extend %tools;
 
     margin: 0;
@@ -72,7 +72,7 @@
     }
   }
 
-  .delete {
+  &_delete {
     @extend %tools;
 
     color: $secondary-color;
@@ -81,11 +81,11 @@
     &:hover {
       background-color: $accent-hover;
     }
-  }
 
-  .delete-wrapper {
-    height: 0;
+    &_wrapper {
+      height: 0;
 
-    vertical-align: middle;
+      vertical-align: middle;
+    }
   }
 }

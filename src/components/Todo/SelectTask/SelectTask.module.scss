@@ -40,27 +40,27 @@
     margin-top: 0;
     margin-bottom: 3rem;
   }
-}
 
-.select {
-  width: 100%;
-  padding: 0.88rem;
-  border: none;
+  &_select {
+    width: 100%;
+    padding: 0.88rem;
+    border: none;
 
-  background-color: transparent;
+    background-color: transparent;
 
-  appearance: none;
-  cursor: pointer;
+    appearance: none;
+    cursor: pointer;
 
-  background-image: url(../../../../public/static/images/arrow-down.png);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 1rem) 1rem;
-  background-size: 0.8rem 1rem;
+    background-image: url(../../../../public/static/images/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) 1rem;
+    background-size: 0.8rem 1rem;
 
-  font-size: inherit;
-  text-transform: capitalize;
+    font-size: inherit;
+    text-transform: capitalize;
 
-  &:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
 }

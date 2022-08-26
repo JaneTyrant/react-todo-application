@@ -16,18 +16,18 @@ const TaskInput = (props) => {
         <label>
           <Field name={name}>
             {({ field, form, meta }) => {
-              const inputClasses = cx(styles.input, {
-                [styles.invalid]: meta.error && meta.touched,
-                [styles.valid]: !meta.error && meta.value,
+              const inputClasses = cx(styles.form_input, {
+                [styles.form_input_invalid]: meta.error && meta.touched,
+                [styles.form_input_valid]: !meta.error && meta.value,
               });
               return (
                 <input {...field} className={inputClasses} {...restProps} />
               );
             }}
           </Field>
-          <ErrorMessage name={name} component="span" className={styles.error} />
+          <ErrorMessage name={name} component="span" className={styles.form_error} />
         </label>
-        <input className={styles.submit} type="submit" value="+" />
+        <input className={styles.form_submit} type="submit" value="+" />
       </Form>
     </Formik>
   );
