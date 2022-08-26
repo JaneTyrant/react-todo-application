@@ -12,8 +12,8 @@ const TaskInput = (props) => {
       onSubmit={addTask}
       validationSchema={SCHEMA_TASK}
     >
-      <Form>
-        <label className={styles.label}>
+      <Form className={styles.form}>
+        <label>
           <Field name={name}>
             {({ field, form, meta }) => {
               const inputClasses = cx(styles.input, {
@@ -27,7 +27,7 @@ const TaskInput = (props) => {
           </Field>
           <ErrorMessage name={name} component="span" className={styles.error} />
         </label>
-        <input type="submit" value="+" />
+        <input className={styles.submit} type="submit" value="+" />
       </Form>
     </Formik>
   );
