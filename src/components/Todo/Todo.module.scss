@@ -1,0 +1,48 @@
+@use "../../common/style/breakpoints" as *;
+@use "../../common/style/colors" as *;
+
+:root {
+  font-size: 14px;
+
+  @media screen and (min-width: $sm) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $md) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $lg) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $xl) {
+    font-size: 26px;
+  }
+}
+
+.section {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: linear-gradient(to bottom right, #455da7, #481a72);
+  background-repeat: no-repeat;
+}
+
+.heading {
+  color: $secondary-color;
+  padding: 2rem;
+  margin: 0;
+
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 0 10px $secondary-color;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 900px;
+  min-width: 300px;
+  padding: 0 10px;
+  margin: auto;
+}
