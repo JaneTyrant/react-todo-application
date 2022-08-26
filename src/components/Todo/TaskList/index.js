@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import { Delete } from "@mui/icons-material";
 import SelectTask from "../SelectTask";
-import OptionValues from "../../../utils";
+import OptionValues from "../../../constants.js";
+import styles from "./TaskList.module.scss";
 
 const TaskList = (props) => {
   const { tasks, deleteTask, setDoneTask } = props;
   const [selectValue, setSelectValue] = useState(OptionValues.all);
   const showTask = (task) => {
     return (
-      <div key={`div${task.id}`}>
+      <div className={styles.container} key={`div${task.id}`}>
         <label>
+          <p className={styles["task-body"]} key={task.id}>
+            {task.body}
+          </p>
           <input
+            className={styles.checkbox}
             type="checkbox"
             value={task.isDone}
             checked={task.isDone}
@@ -17,14 +23,16 @@ const TaskList = (props) => {
               setDoneTask(task.id);
             }}
           />
-          <p key={task.id}>{task.body}</p>
         </label>
         <span
+          className={styles.delete}
           onClick={() => {
             deleteTask(task.id);
           }}
         >
-          X
+          <span className={styles["delete-wrapper"]}>
+          <Delete />
+          </span>
         </span>
       </div>
     );
@@ -43,7 +51,7 @@ const TaskList = (props) => {
   return (
     <>
       <SelectTask selectValue={selectValue} setSelectValue={setSelectValue} />
-      <article>
+      <article className={styles.article}>
         <ShowSelected />
       </article>
     </>

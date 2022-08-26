@@ -1,0 +1,91 @@
+@use "../../../common/style/colors" as *;
+@import "../../../common/style/template";
+
+.article {
+  margin-top: 4.2rem;
+}
+
+.container {
+  text-align: center;
+
+  .task-body {
+    width: 60%;
+    height: 100%;
+    padding: 0.9rem;
+    margin-top: 0;
+
+    background-color: $secondary-color;
+
+    vertical-align: top;
+    cursor: pointer;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+
+    text-align: left;
+
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+
+      background-color: #473789;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+
+      background-color: $accessory-color;
+    }
+  }
+
+  .task-body,
+  .delete-wrapper {
+    display: inline-block;
+  }
+
+  .checkbox {
+    @extend %tools;
+
+    margin: 0;
+
+    &::before {
+      @extend %before;
+
+      background-color: $accessory-color;
+    }
+
+    &:hover::before {
+      background-color: #6c85be;
+    }
+
+    &:checked::before {
+      @extend %before;
+
+      background-color: #4464ad;
+      background-image: url(../../../../public/static/images/check-bold.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 1.8rem;
+    }
+
+    &:checked:hover::before {
+      background-color: #3c5ba1;
+    }
+  }
+
+  .delete {
+    @extend %tools;
+
+    color: $secondary-color;
+    background-color: $accent-color;
+
+    &:hover {
+      background-color: $accent-hover;
+    }
+  }
+
+  .delete-wrapper {
+    height: 0;
+
+    vertical-align: middle;
+  }
+}
