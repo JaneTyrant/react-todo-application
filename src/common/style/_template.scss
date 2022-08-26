@@ -1,0 +1,22 @@
+%tools {
+  display: inline-block;
+  width: 2.98rem;
+  height: 2.98rem;
+
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+%before {
+  content: "";
+
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+%input-accessories {
+    position: absolute;
+
+    color: $secondary-color;
+}
