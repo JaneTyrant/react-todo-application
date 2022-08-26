@@ -1,0 +1,66 @@
+@use "../../../common/style/breakpoints" as *;
+@use "../../../common/style/colors" as *;
+
+.container {
+  display: block;
+  min-width: 120px;
+  width: 28%;
+  padding: 0;
+  margin: auto;
+  margin-top: 39px;
+  margin-bottom: 7.5rem;
+
+  position: relative;
+  z-index: 1;
+
+  background-color: $secondary-color;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+    top: -1px;
+    right: 0;
+    z-index: -1;
+
+    background-color: $accent-color;
+  }
+
+  &:hover::after {
+    background-color: $accent-hover;
+  }
+
+  @media screen and (min-width: $sm) {
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: 0.88rem;
+  border: none;
+
+  background-color: transparent;
+
+  appearance: none;
+  cursor: pointer;
+
+  background-image: url(../../../../public/static/images/arrow-down.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) 1rem;
+  background-size: 0.8rem 1rem;
+
+  font-size: inherit;
+  text-transform: capitalize;
+
+  &:focus {
+    outline: none;
+  }
+}

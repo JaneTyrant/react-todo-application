@@ -1,5 +1,6 @@
 import React from "react";
-import OptionValues from "../../../utils";
+import OptionValues from "../../../constants.js";
+import styles from "./SelectTask.module.scss";
 
 const SelectTask = (props) => {
   const { selectValue, setSelectValue } = props;
@@ -14,9 +15,18 @@ const SelectTask = (props) => {
     ));
   };
   return (
-    <select name="select" value={selectValue} onChange={handlerSelect}>
-      <Options />
-    </select>
+    <>
+      <div className={styles.container}>
+          <select
+            className={styles.select}
+            name="select"
+            value={selectValue}
+            onChange={handlerSelect}
+          >
+            <Options />
+          </select>
+      </div>
+    </>
   );
 };
 
